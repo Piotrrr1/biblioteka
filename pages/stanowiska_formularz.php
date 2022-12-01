@@ -24,6 +24,7 @@ else
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
     if ($row) {
+    setcookie ("ciastko",json_encode($row), time()+86400, "/");
         ?>
         <form action="?page=stanowiska_formularz" method="post">
         <table>
@@ -42,7 +43,9 @@ else
 </table>
 </form>
 <?php
-       } else{
+      } else{
             echo 'Zapytanie zwróciło pusty wynik';
         }
 }
+?>
+

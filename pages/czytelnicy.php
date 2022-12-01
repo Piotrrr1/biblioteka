@@ -34,6 +34,8 @@ $result = mysqli_query($conn, $query);
                     . $row['Funkcja'] . '</td><td>'
                     . $row['Plec'] . '</td><tr>';
             }
+            $_SESSION['sebix']="śmieszek";
         }
         ?>
 </table>
+

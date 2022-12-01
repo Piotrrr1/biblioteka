@@ -11,6 +11,9 @@
 </head>
 <?php require 'include/db_connect.php'; ?>
 <body>
+<?php
+session_start()
+?>
 <div class="sidenav">
     <a class="<?= ($_GET['page'] ?? '') == 'glowna' ? 'active' : '' ?>" href="?page=glowna">Strona główna</a>
     <a class="<?= ($_GET['page'] ?? '') == 'test' ? 'active' : '' ?>" href="?page=test">Test połączenia</a>

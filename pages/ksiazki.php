@@ -33,6 +33,7 @@ $result = mysqli_query($conn, $query);
                     . $row['Cena'] . '</td><td>'
                     . $row['Id_dzial'] . '</td><tr>';
             }
+            echo $_SESSION['sebix'];
         }
         ?>
 </table>

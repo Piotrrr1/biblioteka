@@ -20,12 +20,14 @@ $result = mysqli_query($conn, $query);
     <tr>
         <?php
         if (mysqli_num_rows($result) > 0) {
+            $dzialy = array();
             while ($row = mysqli_fetch_assoc($result)){
+                    $dzialy[]=$row;
                 echo '<tr><td>'
                     . $row['Id_dzial'] . '</td><td>'
-                    . $row['Nazwa'] . '</td><tr>';
+                    . $row['Nazwa'] . '</td></tr>';
             }
+            setcookie ("dzialy",json_encode($dzialy), time()+86400, "/");
         }
         ?>
 </table>
-
